@@ -7,6 +7,8 @@ export default function AdminPage() {
     <Container>
       
         <TabsMenu />
+
+        
     
     </Container>
   )

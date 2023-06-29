@@ -22,7 +22,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://use.typekit.net/yqq8ifk.css"></link>
       </head>
 
-      <body>
+      <body className='text-neutral'>
         <Navbar />
           <div className='pt-20 lg:pt-24 pt-'>
             {children}

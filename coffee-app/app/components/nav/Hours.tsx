@@ -3,8 +3,11 @@ import React from 'react'
 const Hours = () => {
   return (
     <div
-        className="lg:block hidden text-sm font-Obviously font-light"
-    >
+        className="
+          text-sm 
+          font-Obviously 
+          font-light
+        ">
         <p><span className='font-medium'>M, W, F </span>9am-4pm</p>
         <p><span className='font-medium'>Tu, Th </span>9am-3pm</p>
     </div>

@@ -2,9 +2,9 @@
 import React from 'react'
 import Container from './Container'
 import Logo from '../ui/Logo'
-import Hours from '../single/Hours'
-import Greeting from '../single/Greeting'
-import LocationSelector from '../single/LocationSelector';
+import Hours from '../nav/Hours'
+import Greeting from '../nav/Greeting'
+import LocationSelector from '../nav/LocationSelector';
 import Search from '../ui/Search';
 
 const Navbar = () => {
@@ -21,8 +21,15 @@ const Navbar = () => {
             </div>
 
             <div className="flex flex-row items-center gap-4">
-              <Hours />
-              <LocationSelector />
+              
+              <div className='hidden lg:block'>
+                <Hours />
+              </div>
+
+              <div className='hidden lg:block'>
+                <LocationSelector />
+              </div>
+              
 
               <p className='uppercase font-Obviously font-semibold text-sm cursor-pointer hover:text-[#F15D2A] transition hidden lg:block'
                 onClick={() => console.log('sign out')}

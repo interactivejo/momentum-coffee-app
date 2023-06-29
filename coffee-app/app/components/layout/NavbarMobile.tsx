@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "./Container";
-import HoursMobile from "../single/HoursMobile";
-import LocationSelectorMobile from "../single/LocationSelectorMobile";
+import LocationSelector from "../nav/LocationSelector";
+import Hours from "../nav/Hours";
 
 const NavbarMobile = () => {
   return (
@@ -26,8 +26,9 @@ const NavbarMobile = () => {
           justify-between
           gap-4
         ">
-            <LocationSelectorMobile />
-            <HoursMobile />
+            <LocationSelector />
+            
+            <Hours />
         </div>
 
         
