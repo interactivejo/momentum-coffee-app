@@ -1,6 +1,7 @@
 import Navbar from './components/layout/Navbar'
 import './globals.css'
 import NavbarMobile from './components/layout/NavbarMobile'
+import Footer from './components/layout/Footer'
 
 export const metadata = {
   title: 'Momentum Coffee',
@@ -24,11 +25,11 @@ export default function RootLayout({
 
       <body className='text-neutral'>
         <Navbar />
-          <div className='pt-20 lg:pt-24 pt-'>
+          <div className='pt-[8rem] pb-[4rem]'>
             {children}
           </div>
           
-      
+        <Footer />
         <NavbarMobile />
       </body>
     </html>

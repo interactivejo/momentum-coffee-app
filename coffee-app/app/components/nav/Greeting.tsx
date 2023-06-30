@@ -35,7 +35,7 @@ const Greeting = () => {
             uppercase
             text-xl
             hidden
-            lg:block
+            md:block
         '
     >{greeting}</p>
   )

@@ -23,7 +23,7 @@ const SideDrawerBox = (props: any) => {
 
   return (
     <Box sx={{width: 400, padding: 4}}>
-        <h2 className='mb-4 text-2xl font-semibold uppercase'>{props.header}</h2>
+        <h2 className='mb-4 text-2xl font-semibold uppercase font-Obviously'>{props.header}</h2>
         <Divider sx={{marginBottom: '2rem'}} />
 
         {/* {favs && <FavoritesBlock />} */}
