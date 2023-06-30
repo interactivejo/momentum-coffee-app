@@ -325,23 +325,23 @@ const MenuHome = () => {
   return (
     <div>
 
-      <div className='flex flex-row justify-between mb-10'>
+      <div className='flex flex-row gap-8 mb-10 text-lg justify-between overflow-none'>
         <div
-          className={`${toggleState === 1 && 'text-black font-semibold'} cursor-pointer`}
+          className={`${toggleState === 1 && 'text-black font-semibold'} cursor-pointer font-Futura`}
           onClick={() => toggleTab(1)}
         >
           Full Menu
-          <div className={`${toggleState === 1 && 'h-1 mt-4 bg-secondary'}`}></div>
+          <div className={`${toggleState === 1 && 'h-1 mt-4 bg-[#27004B]'}`}></div>
         </div>
 
         {menu.categories.map((category) => (
           <div
-            className={`${toggleState === category.index && 'text-black font-semibold'} cursor-pointer`}
+            className={`${toggleState === category.index && 'text-black font-semibold'} cursor-pointer font-Futura`}
             key={Math.random()}
             onClick={() => toggleTab(category.index)}
           >
             {category.title}
-            <div className={`${toggleState === category.index && 'h-1 mt-4 bg-secondary'}`}></div>
+            <div className={`${toggleState === category.index && 'h-1 mt-4 bg-[#27004B] font-Futura'}`}></div>
           </div>
         ))}
       </div>

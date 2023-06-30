@@ -6,9 +6,11 @@ const MenuItemBlock = (props: any) => {
 
   return (
     <Link
-      href={`/menu/${props.name}`}>
+      href={`/menu/${props.name}`}
+      >
+        
         <div>
-            <div className='w-full min-h-[10rem] mb-4'>
+            <div className='w-full mb-4'>
               <Image 
                 className='border border-gray-200' 
                 src={props.image}
@@ -18,7 +20,7 @@ const MenuItemBlock = (props: any) => {
                 priority={true}
                 />
             </div>
-            <p className='text-base text-center text-black'>{props.name}</p>
+            <p className='text-normal text-center text-black font-Futura leading-[110%]'>{props.name}</p>
         </div>
     </Link>
     

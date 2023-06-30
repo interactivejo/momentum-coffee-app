@@ -8,7 +8,7 @@ const MenuCategoryBlock = (props: any) => {
     <>
        
       <div className='mb-12'>
-        <h3 className='mb-4 text-xl font-semibold text-black uppercase'>{props.title}</h3>
+        <h3 className='mb-4 text-3xl font-semibold text-black uppercase font-Obviously'>{props.title}</h3>
         <Divider />
       
         <div className='grid grid-cols-5 gap-12 mt-8'>
