@@ -4,7 +4,7 @@ const Hours = () => {
   return (
     <div
         className="
-          text-sm 
+          text-xs
           font-Obviously 
           font-light
         ">

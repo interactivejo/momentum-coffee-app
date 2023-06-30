@@ -1,7 +1,9 @@
+'use client';
 import React from "react";
 import Container from "./Container";
 import LocationSelector from "../nav/LocationSelector";
 import Hours from "../nav/Hours";
+import IconGroup from "../nav/IconGroup";
 
 const NavbarMobile = () => {
   return (
@@ -24,11 +26,14 @@ const NavbarMobile = () => {
           flex-row
           items-center
           justify-between
-          gap-4
+          gap-2
         ">
             <LocationSelector />
             
             <Hours />
+
+            <IconGroup />
+            
         </div>
 
         
