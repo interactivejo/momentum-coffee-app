@@ -13,7 +13,6 @@ const LocationSelector: React.FC = () => {
   const onOptionClicked = (value: string) => () => {
     setSelectedOption(value);
     setIsOpen(false);
-    console.log(value)
   };
 
   const options: string[] = ["Austin", "Dallas", "Fort Worth"];
