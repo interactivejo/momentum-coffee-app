@@ -1,5 +1,5 @@
 import React from 'react'
-import {GiHamburgerMenu} from 'react-icons/gi'
+import { FiSearch } from 'react-icons/fi'
 
 const Search = () => {
   return (
@@ -11,7 +11,7 @@ const Search = () => {
         p-2
         lg:hidden'>
             
-        <GiHamburgerMenu size={20}/>
+        <FiSearch size={24}/>
     </div>
   )
 }
