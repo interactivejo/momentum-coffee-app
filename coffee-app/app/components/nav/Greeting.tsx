@@ -33,8 +33,8 @@ const Greeting = () => {
             font-Obviously
             font-semibold
             uppercase
-            text-xl
-            
+            lg:text-xl
+            text-lg
           
         '
     >{greeting}</p>
