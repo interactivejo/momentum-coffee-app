@@ -1,6 +1,7 @@
 "use client";
 import Container from "./components/layout/Container";
 import MenuHome from "./components/sections/MenuHome";
+import Search from "./components/ui/Search";
 
 export default function Home() {
   return (
@@ -10,8 +11,8 @@ export default function Home() {
           <MenuHome />
         </div>
 
-        <div className="hidden lg:w-[25%] lg:flex-grow lg:flex">
-          Right Side content here
+        <div className="hidden lg:w-[25%] lg:flex-grow lg:flex flex-col">
+          <Search />
         </div>
       </div>
     </Container>

@@ -43,7 +43,10 @@ const Navbar = () => {
                   Sign Out
                 </p>
 
-                <Search />
+                <div className='block lg:hidden'>
+                  <Search />
+                </div>
+                
               </div>
             </div>
           </Container>
