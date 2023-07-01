@@ -43,7 +43,7 @@ const LocationSelector: React.FC = () => {
         ' 
         onClick={toggleDropdown}>
         <SlLocationPin size={20} className='text-white' />
-        <p className='text-white uppercase font-Futura text-sm font-semibold border-b-[1px] lg:border-b-0 pb-1'>{selectedOption ? selectedOption : "Location"}</p>
+        <p className='text-white uppercase font-Futura text-sm font-semibold border-b-[1px] lg:border-b-0 pb-1 lg:pb-0'>{selectedOption ? selectedOption : "Location"}</p>
         <FiChevronDown size={20} className={`text-white ${isOpen && 'rotate-180'}`}/>
       </div>
       

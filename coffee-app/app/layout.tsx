@@ -25,11 +25,14 @@ export default function RootLayout({
 
       <body className='text-neutral'>
         <Navbar />
-          <div className='pb-[4rem] min-h-screen pt-[6rem]'>
+          <div className='pb-16 lg:pb-24 min-h-screen pt-[6rem]'>
             {children}
           </div>
 
-          <Footer />
+          <div className='mt-[-6rem]'>
+            <Footer />
+          </div>
+          
         
         <NavbarMobile />
       </body>
