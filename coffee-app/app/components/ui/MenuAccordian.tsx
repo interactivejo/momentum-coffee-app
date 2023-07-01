@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { FiChevronDown } from "react-icons/fi";
 import { useState } from "react";
+import YourUsualBlock from "./YourUsualBlock";
 
 const MenuAccordian = (props: any) => {
 
@@ -16,7 +17,6 @@ const MenuAccordian = (props: any) => {
 
     const toggleChevronHandler = () => {
         setToggleChevron(!toggleChevron)
-        console.log('clicked')
     }
 
   return (
@@ -38,7 +38,10 @@ const MenuAccordian = (props: any) => {
           </div>
         </AccordionSummary>
 
-        <AccordionDetails>details</AccordionDetails>
+        <AccordionDetails>
+          {props.title === "Your Usual" && <YourUsualBlock />}
+          
+        </AccordionDetails>
       </Accordion>
     </div>
   );

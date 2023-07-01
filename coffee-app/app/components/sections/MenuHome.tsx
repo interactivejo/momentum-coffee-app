@@ -323,7 +323,7 @@ const MenuHome = () => {
         <Greeting />
       </div>
 
-      <div className="flex flex-row gap-8 mb-2 lg:mb-10 text-lg lg:justify-between overflow-none justify-start text-[#9E9E9E] lg:pt-2">
+      <div className="flex flex-row gap-8 mb-2 lg:mb-10 text-lg lg:text-base xl:text-lg lg:justify-between overflow-none justify-start text-[#9E9E9E] lg:pt-2">
         <div
           className={`${
             toggleState === 1 && "text-black font-semibold"

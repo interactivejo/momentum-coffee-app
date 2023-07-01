@@ -10,11 +10,11 @@ export default function Home() {
   return (
     <Container>
       <div className="flex flex-row justify-between w-full gap-10">
-        <div className="flex-grow lg:w-[75%] w-full">
+        <div className="flex-grow lg:w-[70%] w-full">
           <MenuHome />
         </div>
 
-        <div className="hidden lg:w-[25%] lg:flex-grow lg:flex flex-col">
+        <div className="hidden lg:w-[30%] lg:flex-grow lg:flex flex-col">
           <div className="mb-8">
             <Search />
           </div>
