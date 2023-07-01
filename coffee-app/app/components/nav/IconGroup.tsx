@@ -8,16 +8,16 @@ const IconGroup = () => {
   return (
     <div className="">
                   <ul className="flex flex-row gap-2">
-                    <li>
+                    <li className='hidden lg:block'>
                       <SideDrawer
-                        icon={<RiHistoryLine className="text-2xl hidden md:block" />}
+                        icon={<RiHistoryLine className="text-2xl" />}
                         label="History"
                         header="Order History"
                       />
                     </li>
-                    <li>
+                    <li className='hidden lg:block'>
                       <SideDrawer
-                        icon={<AiOutlineHeart className="text-2xl hidden md:block" />}
+                        icon={<AiOutlineHeart className="text-2xl" />}
                         label="Favs"
                         header="Favorites"
                       />

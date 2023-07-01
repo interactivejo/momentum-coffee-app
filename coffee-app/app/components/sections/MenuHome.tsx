@@ -331,23 +331,23 @@ const MenuHome = () => {
           onClick={() => toggleTab(1)}
         >
           Full Menu
-          <div className={`${toggleState === 1 && 'h-1 mt-4 bg-[#27004B]'}`}></div>
+          <div className={`${toggleState === 1 && 'h-1 bg-[#27004B]'}`}></div>
         </div>
 
         {menu.categories.map((category) => (
           <div
-            className={`${toggleState === category.index && 'text-black font-semibold'} cursor-pointer font-Futura`}
+            className={`${toggleState === category.index && 'text-black font-semibold'} cursor-pointer font-Futura hidden lg:block`}
             key={Math.random()}
             onClick={() => toggleTab(category.index)}
           >
             {category.title}
-            <div className={`${toggleState === category.index && 'h-1 mt-4 bg-[#27004B] font-Futura'}`}></div>
+            <div className={`${toggleState === category.index && 'h-1 bg-[#27004B] font-Futura'}`}></div>
           </div>
         ))}
       </div>
       
       {toggleState === 1 && (
-       <div>
+       <div className=''>
         {menu.categories.map((category) => (
           <MenuCategoryBlock 
             key={Math.random()}
@@ -362,7 +362,7 @@ const MenuHome = () => {
       )}
       
       {toggleState != 1 && (
-        <div>
+        <div className=''>
           <MenuCategoryBlock
             title={menu.categories[toggleState - 2].title}
             items={menu.categories[toggleState - 2].items}

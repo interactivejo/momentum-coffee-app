@@ -25,7 +25,7 @@ export default function RootLayout({
 
       <body className='text-neutral'>
         <Navbar />
-          <div className='lg:pt-[8rem] pb-[4rem] min-h-screen pt-[6rem]'>
+          <div className='pb-[4rem] min-h-screen pt-[6rem]'>
             {children}
           </div>
 

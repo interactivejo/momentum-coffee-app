@@ -26,9 +26,11 @@ const LocationSelector: React.FC = () => {
           lg:bg-[#F15D2A]
           flex
           flex-row
-          gap-4
+          gap-2
+          md:gap-4
           justify-between
-          p-3
+          lg:p-3
+          px-0
           hover:shadow-md
           cursor-pointer
           transition
@@ -36,11 +38,12 @@ const LocationSelector: React.FC = () => {
           border-[#27004B]
           lg:border-[#F15D2A]
           select-none
-          min-w-[12rem]
+          min-w-[8rem]
+          lg:min-w-[12rem]
         ' 
         onClick={toggleDropdown}>
         <SlLocationPin size={20} className='text-white' />
-        <p className='text-white uppercase font-Futura text-sm font-semibold'>{selectedOption ? selectedOption : "Location"}</p>
+        <p className='text-white uppercase font-Futura text-sm font-semibold border-b-[1px] lg:border-b-0 pb-1'>{selectedOption ? selectedOption : "Location"}</p>
         <FiChevronDown size={20} className={`text-white ${isOpen && 'rotate-180'}`}/>
       </div>
       
@@ -48,7 +51,7 @@ const LocationSelector: React.FC = () => {
         <div 
           className='
             absolute
-            bottom-[3.8rem]
+            bottom-[2.8rem]
             lg:bottom-[-6.8rem]
             bg-white
             border-[1px]

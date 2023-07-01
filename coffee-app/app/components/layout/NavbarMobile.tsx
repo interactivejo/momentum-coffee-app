@@ -16,7 +16,7 @@ const NavbarMobile = () => {
         z-10 
         shadow-sm
         bg-[#27004B]
-        py-4
+        py-2
         bottom-0"
     >
       <Container>

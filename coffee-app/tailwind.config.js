@@ -9,6 +9,8 @@ module.exports = {
     extend: {
       fontFamily: {
         'Obviously': ['obviously', 'sans-serif'],
+        'ObviouslyCondensed': ['obviously-condensed', 'sans-serif'],
+        'ObviouslyNarrow': ['obviously-narrow', 'sans-serif'],
         'Futura': ['futura-pt', 'sans-serif'],
       }
     },
