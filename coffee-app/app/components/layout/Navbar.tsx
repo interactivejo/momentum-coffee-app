@@ -17,7 +17,10 @@ const Navbar = () => {
             <div className="flex flex-row items-center justify-between gap-4">
               <div className="flex flex-row items-center gap-4">
                 <Logo />
-                <Greeting />
+                <div className='hidden lg:block'>
+                  <Greeting />
+                </div>
+                
               </div>
 
               <div className="flex flex-row items-center gap-4">

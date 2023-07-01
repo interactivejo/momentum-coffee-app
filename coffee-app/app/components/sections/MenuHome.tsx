@@ -2,6 +2,7 @@
 import React from 'react'
 import MenuCategoryBlock from '../ui/MenuCategoryBlock'
 import { useState } from 'react'
+import Greeting from '../nav/Greeting'
 
 const menu = 
   {
@@ -325,18 +326,42 @@ const MenuHome = () => {
   return (
     <div>
 
-      <div className='flex flex-row gap-8 mb-10 text-lg justify-between overflow-none'>
+      <div className='mb-4 lg:hidden'>
+        <Greeting />
+      </div>
+      
+
+      <div className='flex flex-row gap-8 mb-6 lg:mb-10 text-lg lg:justify-between overflow-none justify-start text-[#9E9E9E]'>
         <div
           className={`${toggleState === 1 && 'text-black font-semibold'} cursor-pointer font-Futura`}
           onClick={() => toggleTab(1)}
         >
-          Full Menu
+          <span className='hidden lg:inline-block lg:mr-1'>Full</span>Menu
           <div className={`${toggleState === 1 && 'h-1 bg-[#27004B]'}`}></div>
         </div>
 
+        <div
+          className={`${toggleState === 2 && 'text-black font-semibold'} cursor-pointer font-Futura lg:hidden block`}
+          onClick={() => toggleTab(2)}
+        >
+          Favorites
+          <div className={`${toggleState === 2 && 'h-1 bg-[#27004B]'}`}></div>
+        </div>
+
+        <div
+          className={`${toggleState === 3 && 'text-black font-semibold'} cursor-pointer font-Futura lg:hidden block`}
+          onClick={() => toggleTab(3)}
+        >
+          Past Orders
+          <div className={`${toggleState === 3 && 'h-1 bg-[#27004B]'}`}></div>
+        </div>
+
+
+
+
         {menu.categories.map((category) => (
           <div
-            className={`${toggleState === category.index && 'text-black font-semibold'} cursor-pointer font-Futura hidden lg:block`}
+            className={`${toggleState === category.index && 'text-black font-semibold'} cursor-pointer font-Futura hidden lg:block `}
             key={Math.random()}
             onClick={() => toggleTab(category.index)}
           >

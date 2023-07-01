@@ -25,7 +25,7 @@ export default function RootLayout({
 
       <body className='text-neutral'>
         <Navbar />
-          <div className='pb-16 lg:pb-24 min-h-screen pt-[6rem]'>
+          <div className='py-20 lg:py-24 min-h-screen'>
             {children}
           </div>
 

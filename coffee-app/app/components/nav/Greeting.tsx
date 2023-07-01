@@ -34,8 +34,8 @@ const Greeting = () => {
             font-semibold
             uppercase
             text-xl
-            hidden
-            md:block
+            
+          
         '
     >{greeting}</p>
   )
