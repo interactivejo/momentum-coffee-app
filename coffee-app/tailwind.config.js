@@ -12,7 +12,8 @@ module.exports = {
         'ObviouslyCondensed': ['obviously-condensed', 'sans-serif'],
         'ObviouslyNarrow': ['obviously-narrow', 'sans-serif'],
         'Futura': ['futura-pt', 'sans-serif'],
-      }
+      },
+      
     },
   },
   plugins: [],
