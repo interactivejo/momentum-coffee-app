@@ -3,6 +3,7 @@ import React from "react";
 import MenuCategoryBlock from "../ui/MenuCategoryBlock";
 import { useState } from "react";
 import Greeting from "../nav/Greeting";
+import FavoritesBlock from "../ui/FavoritesBlock";
 
 const menu = {
   categories: [
@@ -323,7 +324,7 @@ const MenuHome = () => {
         <Greeting />
       </div>
 
-      <div className="flex flex-row gap-8 mb-2 lg:mb-10 text-lg lg:text-base xl:text-lg lg:justify-between overflow-none justify-start text-[#9E9E9E] lg:pt-2">
+      <div className="flex flex-row gap-8 mb-8 lg:mb-10 text-lg lg:text-base xl:text-lg lg:justify-between overflow-none justify-start text-[#9E9E9E] lg:pt-2">
         <div
           className={`${
             toggleState === 1 && "text-black font-semibold"
@@ -385,7 +386,7 @@ const MenuHome = () => {
         </div>
       )}
 
-      {toggleState === 2 && <div className="lg:hidden">Favorites</div>}
+      {toggleState === 2 && <div className="lg:hidden"><FavoritesBlock/></div>}
 
       {toggleState === 3 && <div className="lg:hidden">Past Orders</div>}
 

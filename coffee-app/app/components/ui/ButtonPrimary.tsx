@@ -11,8 +11,7 @@ const ButtonPrimary = (props: any) => {
       uppercase
       font-semibold
       py-2
-      px-0
-      lg:px-4
+      px-4
       xl:px-6
       text-sm
 
