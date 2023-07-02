@@ -21,6 +21,7 @@ const MenuCategoryBlock = (props: any) => {
           expandIcon={<FiChevronDown size={24} className='text-black' />}
           sx={{
             padding: '0px',
+            borderBottom: '1px solid #E5E5E5',
           }}
         >
           <Typography
@@ -39,7 +40,7 @@ const MenuCategoryBlock = (props: any) => {
             padding: '0px',
           }}
         >
-        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-12 lg:mt-8'>
+        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-12 lg:mt-8 pt-6'>
           {props.items.map((item: any) => (
             <MenuItemBlock
               key={Math.random()}

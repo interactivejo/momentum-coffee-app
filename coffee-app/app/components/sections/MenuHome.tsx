@@ -375,7 +375,7 @@ const MenuHome = () => {
       </div>
 
       {toggleState === 1 && (
-        <div className="">
+        <div className="mt-[-1rem]">
           {menu.categories.map((category) => (
             <MenuCategoryBlock
               key={Math.random()}
