@@ -11,6 +11,7 @@ import { FiChevronDown } from "react-icons/fi";
 import { useState } from "react";
 import YourUsualBlock from "./YourUsualBlock";
 import FavoritesBlock from "./FavoritesBlock";
+import PastOrdersBlock from "./PastOrdersBlock";
 
 const MenuAccordian = (props: any) => {
 
@@ -42,6 +43,7 @@ const MenuAccordian = (props: any) => {
         <AccordionDetails>
           {props.title === "Your Usual" && <YourUsualBlock />}
           {props.title === "Favorites" && <FavoritesBlock/>}
+          {props.title === "Past Orders" && <PastOrdersBlock/>}
           
         </AccordionDetails>
       </Accordion>

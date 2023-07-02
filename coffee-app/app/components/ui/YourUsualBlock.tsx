@@ -47,20 +47,20 @@ const YourUsualBlock = () => {
                     <h3 className='mb-4 text-[1.75rem] font-bold uppercase font-ObviouslyNarrow text-[#27004B]'>{usual.name}</h3>
                     <div className='mb-4'>
                         {usual.info.map((item) => (
-                            <ul key={1}>
-                                <li key={1} className='text-[18px] text-black font-Futura flex flex-row justify-between gap-2 leading-6'>
+                            <ul key={Math.random()}>
+                                <li key={Math.random()} className='text-[18px] text-black font-Futura flex flex-row justify-between gap-2 leading-6'>
                                     <span className=''>•</span>
                                     <span className='w-full'>{item.milk}</span>
                                 </li>
-                                <li key={1} className='text-[18px] text-base text-black font-Futura flex flex-row justify-between gap-2 leading-6'>
+                                <li key={Math.random()} className='text-[18px] text-base text-black font-Futura flex flex-row justify-between gap-2 leading-6'>
                                     <span className=''>•</span>
                                     <span className='w-full'>{item.ice}</span>
                                 </li>
-                                <li key={1} className='text-[18px] text-base text-black font-Futura flex flex-row justify-between gap-2 leading-6'>
+                                <li key={Math.random()} className='text-[18px] text-base text-black font-Futura flex flex-row justify-between gap-2 leading-6'>
                                     <span className=''>•</span>
                                     <span className='w-full'>{item.syrupQnt} {item.syrup}</span>
                                 </li>
-                                <li key={1} className='text-[18px] text-base text-black font-Futura flex flex-row justify-between gap-2 leading-6'>
+                                <li key={Math.random()} className='text-[18px] text-base text-black font-Futura flex flex-row justify-between gap-2 leading-6'>
                                     <span className=''>•</span>
                                     <span className='w-full'>{item.espresso}</span>
                                 </li>

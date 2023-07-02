@@ -40,7 +40,7 @@ const FavoritesBlock = () => {
       <div className="hidden lg:block ">
         {favorites.map((item, index) => (
           <div
-            key={index}
+            key={Math.random()}
             className="flex flex-row gap-4 mb-4 bg-[#F4F2F6] px-4 py-6 items-center justify-between"
           >
             <AiFillHeart size={40} className="text-[#F15D2A]" />
@@ -59,10 +59,9 @@ const FavoritesBlock = () => {
       </div>
 
       <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-8 px-8 md:px-0 h-full">
-        {favorites.map((item, index) => (
-          <div className="flex flex-col justify-center items-center">
+        {favorites.map((item) => (
+          <div className="flex flex-col justify-center items-center"  key={Math.random()}>
             <div
-              key={index}
               className="bg-[#F4F2F6] px-4 py-8 flex flex-row gap-4 w-full"
             >
               <div className="relative w-1/2 min-h-[8rem]">
@@ -86,19 +85,19 @@ const FavoritesBlock = () => {
 
                 <div>
                 {item.info.map((item) => (
-                            <ul key={1} className="mb-2">
-                                <li key={1} className='text-sm text-black font-Futura flex flex-row justify-between gap-2 leading-6'>
+                            <ul key={Math.random()} className="mb-2">
+                                <li key={Math.random()} className='text-sm text-black font-Futura flex flex-row justify-between gap-2 leading-6'>
                                     <span className='w-full'>{item.milk}</span>
                                 </li>
-                                <li key={1} className='text-sm  text-black font-Futura flex flex-row justify-between gap-2 leading-6'>
+                                <li key={Math.random()} className='text-sm  text-black font-Futura flex flex-row justify-between gap-2 leading-6'>
                                  
                                     <span className='w-full'>{item.ice}</span>
                                 </li>
-                                <li key={1} className='text-sm  text-black font-Futura flex flex-row justify-between gap-2 leading-6'>
+                                <li key={Math.random()} className='text-sm  text-black font-Futura flex flex-row justify-between gap-2 leading-6'>
                                   
                                     <span className='w-full'>{item.syrupQnt} {item.syrup}</span>
                                 </li>
-                                <li key={1} className='text-sm text-black font-Futura flex flex-row justify-between gap-2 leading-6'>
+                                <li key={Math.random()} className='text-sm text-black font-Futura flex flex-row justify-between gap-2 leading-6'>
                                    
                                     <span className='w-full'>{item.espresso}</span>
                                 </li>

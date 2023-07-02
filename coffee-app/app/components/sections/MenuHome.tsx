@@ -4,6 +4,7 @@ import MenuCategoryBlock from "../ui/MenuCategoryBlock";
 import { useState } from "react";
 import Greeting from "../nav/Greeting";
 import FavoritesBlock from "../ui/FavoritesBlock";
+import PastOrdersBlock from "../ui/PastOrdersBlock";
 
 const menu = {
   categories: [
@@ -388,7 +389,7 @@ const MenuHome = () => {
 
       {toggleState === 2 && <div className="lg:hidden"><FavoritesBlock/></div>}
 
-      {toggleState === 3 && <div className="lg:hidden">Past Orders</div>}
+      {toggleState === 3 && <div className="lg:hidden"><PastOrdersBlock/></div>}
 
       {toggleState != 1 && (
         <div className="hidden lg:block">
