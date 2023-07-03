@@ -4,6 +4,7 @@ import { useState } from "react";
 import Dashboard from "../sections/Dashboard";
 import OrderHistory from "../sections/OrderHistory";
 import MenuEdit from "../sections/MenuEdit";
+import CurrentOrders from "../sections/CurrentOrders";
 
 const TabsMenu = (props: any) => {
   const [toggleState, setToggleState] = useState(1);
@@ -36,6 +37,9 @@ const TabsMenu = (props: any) => {
       {toggleState === 1 && (
         <div>{props.tabs[0].title === "Dashboard" && <Dashboard />}</div>
       )}
+      {toggleState === 1 && (
+        <div>{props.tabs[0].title === "Current Orders" && <CurrentOrders/>}</div>
+      )}
 
       {toggleState === 2 && (
         <div>{props.tabs[1].title === "Order History" && <OrderHistory />}</div>
@@ -43,6 +47,10 @@ const TabsMenu = (props: any) => {
 
       {toggleState === 3 && (
         <div>{props.tabs[2].title === "Menu" && <MenuEdit />}</div>
+      )}
+
+      {toggleState === 4 && (
+        <div>{props.tabs[3].title === "Dashboard" && <Dashboard/>}</div>
       )}
     </div>
   );

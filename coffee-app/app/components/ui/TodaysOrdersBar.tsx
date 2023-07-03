@@ -5,7 +5,7 @@ const TodaysOrdersBar: React.FC = () => {
   return (
     <div className='py-4 flex lg:flex-row justify-between border-b-[1px] items-center flex-col w-full'>
         <div>
-          <h2 className='font-Futura uppercase font-bold text-2xl mb-4'>
+          <h2 className='mb-4 text-2xl font-bold uppercase font-ObviouslyNarrow'>
             Today's Orders
         </h2>  
         </div>
