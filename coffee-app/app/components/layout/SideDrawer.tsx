@@ -26,6 +26,8 @@ const SideDrawer = (props: any) => {
 
             <SideDrawerBox 
                 header={props.header}
+                label={props.label}
+                setIsDrawerOpen={setIsDrawerOpen}
             />
 
         </Drawer>
