@@ -1,5 +1,6 @@
 import React from 'react'
 import TabsMenu from '../layout/TabsMenu'
+import MenuHeader from '../layout/MenuHeader'
 
 
 
@@ -7,7 +8,9 @@ import TabsMenu from '../layout/TabsMenu'
 const Dashboard = () => {
   return (
     <div>
-        Dashboard
+        <MenuHeader 
+          title="Momentum Cafe Dashboard"
+        />
 
     </div>
   )

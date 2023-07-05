@@ -1,8 +1,15 @@
 import React from 'react'
+import MenuHeader from '../layout/MenuHeader'
+import OrderHistoryTable from '../ui/OrderHistoryTable'
 
 const OrderHistory = () => {
   return (
-    <div>OrderHistory</div>
+    <div>
+      <MenuHeader 
+        title="Order History" />
+
+        <OrderHistoryTable />
+    </div>
   )
 }
 

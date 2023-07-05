@@ -3,6 +3,7 @@ import Search from "../ui/Search";
 import MenuEditBlock from "../ui/MenuEditBlock";
 import { useState } from "react";
 import { BsPlusCircleFill } from "react-icons/bs";
+import MenuHeader from "../layout/MenuHeader";
 
 const menu = {
   categories: [
@@ -320,15 +321,9 @@ const MenuEdit = () => {
 
   return (
     <div>
-      <div className="flex flex-row justify-between gap-4 mb-8">
-        <h2 className="font-ObviouslyNarrow uppercase text-3xl text-[#27004B] font-semibold">
-          Edit Menu
-        </h2>
-        <div className="hidden lg:block">
-          <Search />
-        </div>
-        
-      </div>
+      <MenuHeader 
+        title="Edit Menu"
+      />
 
       <div className="flex flex-row gap-8">
         <div className="lg:min-w-[12rem] min-w-[8rem] lg:pl-8 flex flex-col lg:gap-8 gap-4">
@@ -364,7 +359,7 @@ const MenuEdit = () => {
             </div>
           ))}
 
-          <div className="flex flex-row items-center gap-4 mt-8">
+          <div className="flex flex-row items-center gap-4 pb-8 mt-8">
             <BsPlusCircleFill size={20} className="text-[#F15D2A]"/>
             <p className="text-lg font-medium underline font-Futura hover:text-[#F15D2A] cursor-pointer">Add New Item</p>
           </div>
