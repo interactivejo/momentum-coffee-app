@@ -20,7 +20,7 @@ const TabsMenu = (props: any) => {
           <div
             className={`${
               toggleState === tab.index && "text-black font-semibold"
-            } cursor-pointer font-Futura hidden lg:block `}
+            } cursor-pointer font-Futura`}
             key={Math.random()}
             onClick={() => toggleTab(tab.index)}
           >
