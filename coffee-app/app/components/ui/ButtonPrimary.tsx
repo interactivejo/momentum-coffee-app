@@ -3,10 +3,10 @@ import React from "react";
 
 const ButtonPrimary = (props: any) => {
   return (
-    <button className="
+    <button className={`
+    ${props.disabled ? 'bg-[#D9D9D9]' : 'bg-[#F15D2A]'}
       text-white 
       rounded-none 
-      bg-[#F15D2A]
       font-Futura
       uppercase
       font-semibold
@@ -18,7 +18,7 @@ const ButtonPrimary = (props: any) => {
       hover:shadow-md
       hover:scale-105
       transition
-      ">
+      `}>
       {props.cta}
     </button>
   );

@@ -4,6 +4,7 @@ import MenuEditBlock from "../ui/MenuEditBlock";
 import { useState } from "react";
 import { BsPlusCircleFill } from "react-icons/bs";
 import MenuHeader from "../layout/MenuHeader";
+import AddNewItem from "../modals/AddNewItem";
 
 const menu = {
   categories: [
@@ -359,10 +360,7 @@ const MenuEdit = () => {
             </div>
           ))}
 
-          <div className="flex flex-row items-center gap-4 pb-8 mt-8">
-            <BsPlusCircleFill size={20} className="text-[#F15D2A]"/>
-            <p className="text-lg font-medium underline font-Futura hover:text-[#F15D2A] cursor-pointer">Add New Item</p>
-          </div>
+          <AddNewItem />
           
         </div>
       </div>
