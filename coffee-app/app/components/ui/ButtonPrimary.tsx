@@ -12,8 +12,7 @@ const ButtonPrimary = (props: any) => {
       uppercase
       font-semibold
       py-2
-      px-4
-      xl:px-6
+      px-8
       text-sm
       cursor-pointer
       hover:shadow-md
