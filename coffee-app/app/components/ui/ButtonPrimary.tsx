@@ -1,9 +1,10 @@
 'use client'
+import Link from "next/link";
 import React from "react";
 
 const ButtonPrimary = (props: any) => {
   return (
-    <button className={`
+    <div className={`
     ${props.disabled ? 'bg-[#D9D9D9]' : 'bg-[#F15D2A]'}
       text-white 
       rounded-none 
@@ -14,13 +15,22 @@ const ButtonPrimary = (props: any) => {
       px-4
       xl:px-6
       text-sm
-
+      cursor-pointer
       hover:shadow-md
       hover:scale-105
       transition
-      `}>
-      {props.cta}
-    </button>
+      `}
+      onClick={() => props.setIsDrawerOpen(false)}
+      >
+        {props.link ?
+          <Link href={props.link}>
+            {props.cta}
+          </Link>
+          :
+          props.cta
+        }
+        
+    </div>
   );
 };
 

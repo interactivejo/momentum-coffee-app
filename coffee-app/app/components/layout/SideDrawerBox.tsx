@@ -6,6 +6,7 @@ import ButtonPrimary from '../ui/ButtonPrimary'
 import PastOrdersBlock from '../ui/PastOrdersBlock'
 import {BsArrowLeft} from 'react-icons/bs'
 import {GrClose} from 'react-icons/gr'
+import BackButton from '../ui/BackButton'
 
 const SideDrawerBox = (props: any) => {
 
@@ -31,17 +32,17 @@ const SideDrawerBox = (props: any) => {
         display: 'flex', 
         flexDirection: 'column',
         justifyContent: 'space-between',
-        }}>
+        '@media (max-width: 1024px)': {
+          width: '100vw',
+        }}}
+        >
 
         <div className='h-full'>
           {props.label === 'Bag' && 
             <div className='flex flex-col items-center justify-center w-full h-full'>
               <div className='flex flex-row justify-between w-full'>
-                <div className='flex flex-row items-center gap-2'>
-                  <BsArrowLeft size={20} className='text-lg text-[#F15D2A]' onClick={() => props.setIsDrawerOpen(false)}/>
-                  <p className='text-[#F15D2A] font-Futura font-semibold'>Back</p>
-                </div>
-                <GrClose size={18} className='text-lg text-[#F15D2A]' onClick={() => props.setIsDrawerOpen(false)}/>
+                <BackButton setIsDrawerOpen={props.setIsDrawerOpen} trigger='SideDrawer'/>
+                <GrClose size={18} className='text-lg text-[#F15D2A] cursor-pointer' onClick={() => props.setIsDrawerOpen(false)}/>
               </div>
 
               <div className='flex flex-col items-center justify-center h-full'>
@@ -55,7 +56,7 @@ const SideDrawerBox = (props: any) => {
                  <div className='flex flex-col items-center gap-8'>
                 <h3 className='text-4xl font-semibold uppercase font-ObviouslyNarrow'>Oh No!</h3>
                 <p className='text-xl text-center leading-2 font-Futura'>Looks like you haven't added anything to your cart yet</p>
-                <ButtonPrimary cta='View Full Menu' />
+                <ButtonPrimary cta='View Full Menu' link='/' setIsDrawerOpen={props.setIsDrawerOpen}/>
               </div>
               </div>
 
@@ -79,10 +80,6 @@ const SideDrawerBox = (props: any) => {
               <PastOrdersBlock/>
             </div>
           }
-
-
-          {/* <h2 className='mb-4 text-2xl font-semibold uppercase font-Obviously'>{props.header}</h2>
-          <Divider sx={{marginBottom: '2rem'}} /> */}
         </div>
 
       </Box>
