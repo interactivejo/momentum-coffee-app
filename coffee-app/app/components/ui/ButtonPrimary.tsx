@@ -12,12 +12,14 @@ const ButtonPrimary = (props: any) => {
       uppercase
       font-semibold
       py-2
-      px-8
+      lg:px-8
+      px-6
       text-sm
       cursor-pointer
       hover:shadow-md
       hover:scale-105
       transition
+      text-center
       `}
       onClick={() => props.setIsDrawerOpen(false)}
       >
