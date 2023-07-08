@@ -5,6 +5,7 @@ import Image from "next/image";
 import OrderReviewCard from "../ui/OrderReviewCard";
 import ButtonPrimary from "../ui/ButtonPrimary";
 import OrderStep from "../ui/OrderStep";
+import CancelOrder from "../modals/CancelOrder";
 
 let status = "Order Received";
 
@@ -45,7 +46,7 @@ const OrderReview = (props: any) => {
         </div>
         
         <div className={`${status === 'Ready' && 'hidden'}`}>
-           <ButtonPrimary cta="Cancel Order" /> 
+           <CancelOrder />
         </div>
         
       </div>

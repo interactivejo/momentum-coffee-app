@@ -21,7 +21,8 @@ const ButtonPrimary = (props: any) => {
       transition
       text-center
       `}
-      onClick={() => props.setIsDrawerOpen(false)}
+  
+      onClick={() => props.setIsDrawerOpen && props.setIsDrawerOpen(false)}
       >
         {props.link ?
           <Link href={props.link}>

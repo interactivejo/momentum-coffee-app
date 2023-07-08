@@ -16,6 +16,9 @@ const style = {
   boxShadow: 24,
   p: 4,
   select: "none",
+  ':focus': {
+    outline: 'none'
+    }
 };
 
 const AddNewItem = () => {

@@ -43,7 +43,6 @@ const OrderPage = () => {
           <div className='mb-8'>
             <BackButton href='/'/>
           </div>
-
           <OrderReview 
             orderNumber={order.orderNumber}
             lineOrder={order.lineOrder}
