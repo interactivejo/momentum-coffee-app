@@ -2,7 +2,7 @@ import React from "react";
 
 const LineCount = (props: any) => {
   return (
-    <p>
+    <p className="font-Futura">
       {props.status === 'Preparing' ? 'You are' : 'There are currently'}
      
       {" "}
@@ -13,7 +13,7 @@ const LineCount = (props: any) => {
 
       {" "}
       
-        {props.status === 'Preparing' ? 'in line' : ' people ahead of you'}
+        {props.status === 'Preparing' ? 'in line' : ' people ahead of you.'}
      
     </p>
   );
