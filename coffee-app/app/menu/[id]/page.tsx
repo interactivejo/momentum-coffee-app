@@ -7,14 +7,13 @@ import { MenuItem, Select } from "@mui/material";
 import { SelectChangeEvent } from "@mui/material";
 import * as React from "react";
 import { FiChevronDown } from "react-icons/fi";
+import FormSelect from "@/app/components/ui/FormSelect";
+import ButtonPrimary from "@/app/components/ui/ButtonPrimary";
+import { AiOutlineHeart } from "react-icons/ai";
 
 
 export default function MenuHome() {
-  const [select, setSelect] = React.useState("");
 
-  const handleChange = (event: SelectChangeEvent) => {
-    setSelect(event.target.value);
-  };
 
   return (
     <Container>
@@ -36,93 +35,73 @@ export default function MenuHome() {
             <Divider />
           </div>
 
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 mb-8">
             <h2 className="text-2xl font-semibold uppercase font-ObviouslyNarrow">
               Customizations
             </h2>
 
-            <FormControl
-              sx={{
-                width: "100%",
-              }}
-            >
-              <InputLabel
-                sx={{
-                  color: "#000000",
-                  fontFamily: "Futura",
-                  textTransform: "uppercase",
-                  "&.Mui-focused": {
-                    color: "#000000",
-                  },
-                }}
-              >
-                Milk
-              </InputLabel>
-              <Select
-                IconComponent={FiChevronDown}
-                labelId="milk-customization"
-                id="milk-customization"
-                value={select}
-                label="Select"
-                onChange={handleChange}
-                sx={{
-                  borderRadius: "0px",
-                  fontFamily: "Futura",
-                  "& .css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#000000",
-                  },
-
-                  "& .MuiOutlinedInput-notchedOutline": {
-                    border: "1px solid #000000 !important",
-                    borderRadius: "0px",
-                  },
-                  "& .css-skycg5-MuiFormLabel-root-MuiInputLabel-root.Mui-focused":
-                    {
-                      color: "#000000 !important",
-                    },
-                }}
-                MenuProps={{
-                  PaperProps: {
-                    sx: {
-                      "& .MuiMenuItem-root": {
-                        paddingTop: ".75rem",
-                        paddingBottom: ".75rem",
-                        fontFamily: "Futura",
-
-                      },
-                      "& .MuiMenuItem-root.Mui-selected": {
-                        backgroundColor: "#F4F2F6",
-                      },
-                      "& .MuiMenuItem-root:hover": {
-                        backgroundColor: "#F15D2A"
-                      },
-                      "& .MuiMenuItem-root.Mui-selected:hover": {
-                        backgroundColor: "#F15D2A"
-                      },
-                      '& .css-6hp17o-MuiList-root-MuiMenu-list': {
-                        paddingTop: '0px',
-                        paddingBottom: '0px',
-                        border: '1px solid #000000',
-                        borderRadius: '0px',
-                      },
-                      "&.css-ak6gk7-MuiPaper-root-MuiPopover-paper-MuiMenu-paper": {
-                        backgroundColor: "#000000 !important",
-                      },
-                    }
-                  }
-                }}
-                variant="outlined"
-              >
-                <MenuItem value={"No Milk"}>No Milk</MenuItem>
-                <MenuItem value={"Whole Milk"}>Whole Milk</MenuItem>
-                <MenuItem value={"Almond Milk"}>Almond</MenuItem>
-                <MenuItem value={"Oat Milk"}>Coconut</MenuItem>
-                <MenuItem value={"Soy Milk"}>Breve (Half & Half)</MenuItem>
-              </Select>
-            </FormControl>
-
-            
+            <FormSelect 
+              label="Milk"
+              items={[
+                "2% Milk",
+                "Skim Milk",
+                "Almond Milk",
+                "Oat Milk",
+                "Soy Milk",
+              ]}
+            />
+            <FormSelect 
+              label="Ice"
+              items={[
+                "Light Ice",
+                "Regular Ice",
+                "Extra Ice",
+              ]}
+            />
           </div>
+
+          <div className="flex flex-col gap-8 mb-8">
+            <h2 className="text-2xl font-semibold uppercase font-ObviouslyNarrow">
+              Add-Ons
+            </h2>
+
+            <FormSelect 
+              label="Syrup"
+              items={[
+                "Vanilla",
+                "Caramel",
+                "Hazelnut",
+                "Mocha",
+                "Pumpkin Spice",
+              ]}
+            />
+            <FormSelect 
+              label="Espresso"
+              items={[
+                "Extra Shot",
+                "Double Shot",
+                "Triple Shot",
+              ]}
+            />
+          </div>
+
+          <div className="flex flex-col gap-8">
+            <h2 className="text-2xl font-semibold uppercase font-ObviouslyNarrow">
+              Notes
+            </h2>
+
+            <input 
+              type="text"
+              className="w-full p-2 border-[1px] border-[#000000] rounded-[0px] font-Futura focus:outline-none align-top"
+            />
+          </div>
+
+          <div className="flex flex-row items-center gap-4 pt-8">
+            <ButtonPrimary cta="Add to Cart"/>
+            <AiOutlineHeart size={24} className=" text-[#F15D2A]"/>
+          </div>
+
+
         </div>
 
         <div className="relative flex flex-col justify-start w-[45%] min-h-[70vh] align-middle xl:justify-center">
