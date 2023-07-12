@@ -1,19 +1,15 @@
 "use client";
 import Container from "@/app/components/layout/Container";
 import BackButton from "@/app/components/ui/BackButton";
-import { Divider, FormControl, InputLabel } from "@mui/material";
+import { Divider} from "@mui/material";
 import Image from "next/image";
-import { MenuItem, Select } from "@mui/material";
-import { SelectChangeEvent } from "@mui/material";
 import * as React from "react";
-import { FiChevronDown } from "react-icons/fi";
 import FormSelect from "@/app/components/ui/FormSelect";
 import ButtonPrimary from "@/app/components/ui/ButtonPrimary";
-import { AiOutlineHeart } from "react-icons/ai";
-
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 export default function MenuHome() {
-
+  const [isFavorite, setIsFavorite] = React.useState(false);
 
   return (
     <Container>
@@ -21,8 +17,11 @@ export default function MenuHome() {
         <BackButton href="/" />
       </div>
       <div className="flex flex-row justify-between w-full gap-12">
-        <div className="w-[55%]">
-          <div className="flex flex-col gap-8 mb-8">
+        <div className="lg:w-[55%] w-full">
+
+
+        <div className="flex flex-row gap-4">
+          <div className="flex flex-col gap-8  w-[70%] lg:w-full">
             <h1 className="text-5xl font-semibold font-ObviouslyNarrow">
               Iced Latte
             </h1>
@@ -32,15 +31,32 @@ export default function MenuHome() {
               eum quaerat sunt quibusdam, dolorem esse, nam sint, dolor optio
               adipisci magni!
             </p>
-            <Divider />
           </div>
+          <div className="relative flex flex-col justify-start w-[30%] align-middle lg:hidden xl:justify-center">
+            <Image
+              className="border-[1px]"
+              src="/images/iced-latte.jpeg"
+              alt="Iced Latte"
+              fill={true}
+              style={{
+                objectFit: "cover",
+              }}
+              sizes="100%"
+            />
+          </div>
+        </div>
+        
+        <div className="py-8">
+          <Divider />
+        </div>
+          
 
           <div className="flex flex-col gap-8 mb-8">
             <h2 className="text-2xl font-semibold uppercase font-ObviouslyNarrow">
               Customizations
             </h2>
 
-            <FormSelect 
+            <FormSelect
               label="Milk"
               items={[
                 "2% Milk",
@@ -50,13 +66,9 @@ export default function MenuHome() {
                 "Soy Milk",
               ]}
             />
-            <FormSelect 
+            <FormSelect
               label="Ice"
-              items={[
-                "Light Ice",
-                "Regular Ice",
-                "Extra Ice",
-              ]}
+              items={["Light Ice", "Regular Ice", "Extra Ice"]}
             />
           </div>
 
@@ -65,7 +77,7 @@ export default function MenuHome() {
               Add-Ons
             </h2>
 
-            <FormSelect 
+            <FormSelect
               label="Syrup"
               items={[
                 "Vanilla",
@@ -75,13 +87,9 @@ export default function MenuHome() {
                 "Pumpkin Spice",
               ]}
             />
-            <FormSelect 
+            <FormSelect
               label="Espresso"
-              items={[
-                "Extra Shot",
-                "Double Shot",
-                "Triple Shot",
-              ]}
+              items={["Extra Shot", "Double Shot", "Triple Shot"]}
             />
           </div>
 
@@ -90,21 +98,29 @@ export default function MenuHome() {
               Notes
             </h2>
 
-            <input 
-              type="text"
+            <textarea
               className="w-full p-2 border-[1px] border-[#000000] rounded-[0px] font-Futura focus:outline-none align-top"
-            />
+              maxLength={250}
+            ></textarea>
           </div>
 
           <div className="flex flex-row items-center gap-4 pt-8">
-            <ButtonPrimary cta="Add to Cart"/>
-            <AiOutlineHeart size={24} className=" text-[#F15D2A]"/>
+            <ButtonPrimary cta="Add to Cart" />
+
+            <div
+              className="text-[#F15D2A] cursor-pointer"
+              onClick={() => setIsFavorite(!isFavorite)}
+            >
+              {isFavorite ? (
+                <AiFillHeart size={24} className="" />
+              ) : (
+                <AiOutlineHeart size={24} className="" />
+              )}
+            </div>
           </div>
-
-
         </div>
 
-        <div className="relative flex flex-col justify-start w-[45%] min-h-[70vh] align-middle xl:justify-center">
+        <div className="hidden relative lg:flex flex-col justify-start lg:w-[45%] align-middle xl:justify-center">
           <Image
             className="border-[1px]"
             src="/images/iced-latte.jpeg"
@@ -113,6 +129,7 @@ export default function MenuHome() {
             style={{
               objectFit: "cover",
             }}
+            sizes="100%"
           />
         </div>
       </div>
