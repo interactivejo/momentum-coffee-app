@@ -6,7 +6,7 @@ const ButtonPrimary = (props: any) => {
   return (
     <div className={`
     ${props.disabled ? 'bg-[#D9D9D9]' : 'bg-[#F15D2A]'}
-      text-white 
+    ${props.secondary ? 'bg-white' : 'bg-[#F15D2A]'}
       rounded-none 
       font-Futura
       uppercase
@@ -20,6 +20,7 @@ const ButtonPrimary = (props: any) => {
       hover:scale-105
       transition
       text-center
+      min-w-[10rem]
       `}
   
       onClick={() => props.setIsDrawerOpen && props.setIsDrawerOpen(false)}
@@ -29,7 +30,9 @@ const ButtonPrimary = (props: any) => {
             {props.cta}
           </Link>
           :
-          props.cta
+          <span className={props.secondary ? 'text-black' : 'text-white'}>
+            {props.cta}
+          </span>
         }
         
     </div>
