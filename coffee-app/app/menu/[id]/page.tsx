@@ -86,10 +86,12 @@ export default function MenuHome() {
                 "Mocha",
                 "Pumpkin Spice",
               ]}
+              qnty={true}
             />
             <FormSelect
-              label="Espresso"
+              label="Shots"
               items={["Extra Shot", "Double Shot", "Triple Shot"]}
+              qnty={true}
             />
           </div>
 
