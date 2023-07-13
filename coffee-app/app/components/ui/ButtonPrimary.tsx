@@ -26,7 +26,7 @@ const ButtonPrimary = (props: any) => {
       onClick={() => props.setIsDrawerOpen && props.setIsDrawerOpen(false)}
       >
         {props.link ?
-          <Link href={props.link}>
+          <Link className={props.secondary ? 'text-black' : 'text-white'} href={props.link}>
             {props.cta}
           </Link>
           :
